@@ -1,0 +1,45 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.title{
+    /* background-color: red; */
+    font-size: 80px;
+    margin-top: 100px;
+    display: flex;
+}
+.question{
+    /* background-color: red; */
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+.sub_title{
+    /* background-color: red; */
+    margin-top: 50px;
+    margin-left: 700px;
+    font-size: 50px;
+}
+.parrafo{
+    /* background-color: red; */
+    margin-left: 500px;
+    font-size: 18px;
+}
+img{
+    opacity: 20%;
+}
+.registro{
+    opacity: 100%;
+    width: 500px;
+}
+.titulo{
+    margin-left: 130px;
+    font-size: 50px;
+}
+.text-center{
+    margin-top: 20px;
+    font-size: 20px;
+    margin-left: 10px;
+}
