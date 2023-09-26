@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreign('fk_documento')->references('documento')->on('mujeres');
             $table->unsignedBigInteger('fk_codigo_servicios');
             $table->foreign('fk_codigo_servicios')->references('codigo')->on('servicios');
+            $table->unsignedBigInteger('fk_codigo_manzana');
+            $table->foreign('fk_codigo_manzana')->references('codigo')->on('manzanas_del_cuidado');
             $table->date('dia');
             $table->time('hora');
             $table->timestamps();

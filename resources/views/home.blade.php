@@ -20,4 +20,13 @@
         </div>
     </div>
 </div>
+
+@foreach ($users as $user)
+        <li>{{ $user->name }}</li>
+@endforeach
+
+@foreach ($manzanas as $manzana)
+        <li>{{ $manzana->nombre }}</li>
+@endforeach
+
 @endsection
