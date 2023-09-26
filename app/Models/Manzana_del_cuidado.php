@@ -13,12 +13,12 @@ class Manzana_del_cuidado extends Model
         'codigo',
         'nombre',
         'localidad',
-        'diireccion',
-        'fk_codigo_establecimiento',
+        'direccion',
+        'fk_codigo_municipio',
     ];
 
     public function municipio()
     {
-        return $this->belongsTo(Municipio::class, 'genero_id');    
+        return $this->belongsTo(Municipio::class, 'fk_codigo_municipio');    
     }
 }

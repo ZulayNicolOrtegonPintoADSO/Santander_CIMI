@@ -20,7 +20,7 @@ return new class extends Migration
             $table->unsignedBigInteger('fk_codigo_servicios');
             $table->foreign('fk_codigo_servicios')->references('codigo')->on('servicios');
             $table->unsignedBigInteger('fk_codigo_manzana');
-            $table->foreign('fk_codigo_manzana')->references('codigo')->on('manzanas_del_cuidado');
+            $table->foreign('fk_codigo_manzana')->references('codigo')->on('manzana_del_cuidados');
             $table->date('dia');
             $table->time('hora');
             $table->timestamps();

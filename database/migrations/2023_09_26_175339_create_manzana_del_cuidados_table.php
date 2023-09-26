@@ -12,13 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('manzanas_del_cuidado', function (Blueprint $table) {
+        Schema::create('manzana_del_cuidados', function (Blueprint $table) {
             $table->bigIncrements('codigo');
             $table->string('nombre' , 20);
             $table->string('localidad' , 50);
             $table->string('direccion', 50);
-            $table->unsignedBigInteger('fk_codigo_establecimiento');
-            $table->foreign('fk_codigo_establecimiento')->references('codigo')->on('municipios');  
+            $table->unsignedBigInteger('fk_codigo_municipio');
+            $table->foreign('fk_codigo_municipio')->references('codigo')->on('municipios');  
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('manzanas_del_cuidado');
+        Schema::dropIfExists('manzana_del_cuidados');
     }
 };

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Manzana_del_cuidado;
+use App\Models\Manzana_del_cuidados;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,6 @@ class HomeController extends Controller
         
         // dd($users);
         
-        return view('home', compact('users' , 'manzanas'));
+        return view('home', compact('users'));
     }
 }
