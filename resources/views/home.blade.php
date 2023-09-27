@@ -8,7 +8,7 @@
                 <div class="container_title">
                     <p class="text-white text-md-center">Municipios</p>
                     <img class="img-thumbnail imagenes_menu rounded mx-auto d-block " src="{{asset('imagenes/municipios.jpg')}}" alt="">
-                    <a href="{{route('municipios')}}" class=" boton btn btn-primary"> ver más...</a>
+                    <a href="{{route('municipios')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
             <div class=" columnas col-12 col-md-4 border"> 
@@ -75,7 +75,7 @@
                 <div class="container_title">
                     <p class="text-white text-md-center">Servicios</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/servicios.jpg')}}" alt="">
-                    <a href="{{route('servicios')}}" class=" boton btn btn-primary"> ver más...</a>
+                    <a href="{{route('servicios')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
         </div>
@@ -84,21 +84,21 @@
                 <div class="container_title">
                     <p class="text-white text-md-center">Establecimientos</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/establecimientos.jpg')}}" alt="">
-                    <a href="{{route('establecimientos')}}" class=" boton btn btn-primary"> ver más...</a>
+                    <a href="{{route('establecimientos')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Mujeres</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/mujeres.jpg')}}" alt="">
-                    <a href="{{route('mujeres')}}" class=" boton btn btn-primary"> ver más...</a>
+                    <a href="{{route('mujeres')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Agenda</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block text-center" src="{{asset('imagenes/agenda.jpg')}}" alt="">
-                    <a href="{{route('agenda')}}" class=" boton btn btn-primary"> ver más...</a>
+                    <a href="{{route('agenda')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
         </div>
