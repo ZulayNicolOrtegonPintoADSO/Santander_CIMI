@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Manzana;
-use App\Models\Manzana_del_cuidado;
-use App\Models\Manzana_del_cuidados;
+use App\Models\Municipio;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -34,9 +33,12 @@ class HomeController extends Controller
         
         return view('home', compact('users', 'manzanas'));
     }
+    
     public function vista_municipio()
     {
-        return view('municipios');
+        $municipios = Municipio::paginate(100);
+
+        return view('municipios', compact('municipios'));
     }
     public function vista_mujeres()
     {
