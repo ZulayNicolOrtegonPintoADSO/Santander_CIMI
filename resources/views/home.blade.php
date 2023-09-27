@@ -54,9 +54,9 @@
 </main>
 
 
-{{-- @foreach ($users as $user)
+@foreach ($users as $user)
         <li>{{ $user->name }}</li>
-@endforeach --}}
+@endforeach
 
 @foreach ($manzanas as $manzana)
         <li>{{ $manzana->nombre }}</li>

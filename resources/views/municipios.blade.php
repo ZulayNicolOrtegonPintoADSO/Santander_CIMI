@@ -2,14 +2,10 @@
 
 @section('content')
 
-<div class="container">
-
-    {{-- <div class="nav btn btn-success"><nav>+ Agregar municipio</nav></div> --}}
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        + Agregar municipio
-    </button>
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  {{-- CONTENEDOR DE LOS MODALES --}}
+  <div>
+    {{-- Vista del modal para agregar --}}
+    <div class="modal fade" id="modalAgg" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -30,11 +26,10 @@
         </div>
     </div>
 
-    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Editar municipio
-    </button>
+    
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    {{-- Vista del modal para editar --}}
+    <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -51,6 +46,46 @@
           </div>
         </div>
     </div>
+</div>
+
+
+{{-- CONTENEDOR DEL CRUD --}}
+<div class="container text-center">
+  <div class="row">
+
+    <button type="button" class="btn btn-success form-control fs-4" data-bs-toggle="modal" data-bs-target="#modalAgg">
+        + Agregar municipio
+    </button>
+
+    {{-- Tabla que muestra los municipios --}}
+      <table class="table mt-5 border">
+        <thead>
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nombre</th>
+            <th scope="col"> </th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($municipios as $municipio)
+            <tr>
+              <th scope="row">{{ $municipio->codigo }}</th>
+              <td>{{ $municipio->nombre }}</td>
+    
+              <td>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdit">
+                  Editar municipio
+                </button>
+
+                <a href="{{route('eliminar')}}" class="btn btn-danger">Eliminar</a>
+              </td>
+    
+            </tr>
+          @endforeach 
+        </tbody>
+      </table>
+
+  </div>
 </div>
 
 @endsection

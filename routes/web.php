@@ -19,6 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// RUTAS DE LAS VISTAS
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/municipios', [App\Http\Controllers\HomeController::class, 'vista_municipio'])->name('municipios');
 Route::get('/mujeres', [App\Http\Controllers\HomeController::class, 'vista_mujeres'])->name('mujeres');
@@ -26,6 +27,12 @@ Route::get('/servicios', [App\Http\Controllers\HomeController::class, 'vista_ser
 Route::get('/establecimientos', [App\Http\Controllers\HomeController::class, 'vista_establecimientos'])->name('establecimientos');
 Route::get('/agenda', [App\Http\Controllers\HomeController::class, 'vista_agenda'])->name('agenda');
 Route::get('/manzana', [App\Http\Controllers\HomeController::class, 'vista_manzana'])->name('manzana');
+
+
+// RUTAS PARA EL CRUD DE MUNICIPIOS
+Route::get('/agregar', [App\Http\Controllers\MunicipioController::class, 'agregar'])->name('agregar');
+Route::get('/editar', [App\Http\Controllers\MunicipioController::class, 'editar'])->name('editar');
+Route::get('/eliminar', [App\Http\Controllers\MunicipioController::class, 'eliminar'])->name('eliminar');
 
 
 
