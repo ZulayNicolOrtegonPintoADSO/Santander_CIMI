@@ -13,17 +13,22 @@ class Servicios extends Model
         'codigo',
         'nombre',
         'descripcion',
-        'fk_codigo_categoria_servicios',
-        'fk_codigo_establecimiento',
+        'fk_cod_categoria',
+        'fk_cod_establecimiento',
     ];
 
     public function categoria()
     {
-        return $this->belongsTo(Categoria_servicio::class, 'genero_id');    
+        return $this->belongsTo(Categoria_servicio::class, 'fk_cod_categoria', 'codigo');    
     }
 
     public function establecimiento()
     {
-        return $this->belongsTo(Establecimiento::class, 'genero_id');    
+        return $this->belongsTo(Establecimiento::class, 'fk_cod_establecimiento', 'codigo');    
+    }
+
+    public function mujer()
+    {
+        return $this->belongsTo(Mujer::class, 'fk_cod_servicio');
     }
 }

@@ -11,7 +11,7 @@ class Mujer extends Model
 
     protected $fillable = [
         'documento',
-        'tipo_documento',
+        'tipodoc',
         'nombres',
         'apellidos',
         'ciudad',
@@ -19,5 +19,16 @@ class Mujer extends Model
         'correo',
         'direccion',
         'ocupacion',
+        'fk_cod_servicio',
     ];
+
+    public function agenda()
+    {
+        return $this->hasOne(Agenda::class, 'fk_doc_mujer');
+    }
+
+    public function servicios()
+    {
+        return $this->hasMany(Servicios::class, 'fk_cod_servicio');
+    }
 }

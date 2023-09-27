@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('mujeres', function (Blueprint $table) {
             $table->string('documento' , 10)->index();;
-            $table->string('tipo_documento' , 20);
+            $table->string('tipodoc' , 20);
             $table->string('nombres' , 20);
             $table->string('apellidos' , 20);
             $table->string('ciudad' , 20);
@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('correo' , 30);
             $table->string('direccion' , 50);
             $table->string('ocupacion' , 20);
+            $table->unsignedBigInteger('fk_cod_servicio');
+            $table->foreign('fk_cod_servicio')->references('codigo')->on('servicios');  
             $table->timestamps();
         });
     }

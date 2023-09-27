@@ -11,10 +11,23 @@ class Agenda extends Model
 
     protected $fillable = [
         'codigo',
-        'nombre',
-        'descripcion',
-        'fk_documento',
-        'fk_codigo_servicios',
-        'fk_codigo_manzana',
+        'fk_doc_mujer',
+        'fk_cod_manzanas_servicios',
+        'disponibilidad',
     ];
+
+    /* 
+        RELACIONER UNO A UNO ENTRE AGENDA Y LOS
+        MODELOS DE MUJER, MANZANA_SERVICIO
+    */
+
+    public function mujer()
+    {
+        return $this->hasOne(Mujer::class);
+    }
+
+    public function manzana_servicio()
+    {
+        return $this->hasOne(Manzana_servicio::class);
+    }
 }

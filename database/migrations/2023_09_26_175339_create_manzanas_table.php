@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use League\CommonMark\Reference\Reference;
 
 return new class extends Migration
 {
@@ -11,11 +12,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('establecimientos', function (Blueprint $table) {
+        Schema::create('manzanas', function (Blueprint $table) {
             $table->bigIncrements('codigo');
             $table->string('nombre' , 20);
-            $table->string('responsable' , 50);
-            $table->string('descripcion' , 250);
+            $table->string('localidad' , 50);
+            $table->string('direccion', 50);
+            $table->unsignedBigInteger('fk_cod_municipio');
+            $table->foreign('fk_cod_municipio')->references('codigo')->on('municipios');  
             $table->timestamps();
         });
     }
@@ -25,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('establecimientos');
+        Schema::dropIfExists('manzanas');
     }
 };

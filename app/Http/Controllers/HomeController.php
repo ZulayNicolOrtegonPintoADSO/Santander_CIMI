@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Manzana;
 use App\Models\Manzana_del_cuidado;
 use App\Models\Manzana_del_cuidados;
 use App\Models\User;
@@ -26,11 +27,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $manzanas = Manzana_del_cuidado::paginate(20);
+        $manzanas = Manzana::paginate(20);
         $users = User::paginate(20);
         
-        // dd($users);
+        // dd($manzanas);
         
-        return view('home', compact('users'));
+        return view('home', compact('users', 'manzanas'));
     }
 }

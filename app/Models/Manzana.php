@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Manzana_del_cuidado extends Model
+class Manzana extends Model
 {
     use HasFactory;
 
@@ -14,11 +14,11 @@ class Manzana_del_cuidado extends Model
         'nombre',
         'localidad',
         'direccion',
-        'fk_codigo_municipio',
+        'fk_cod_municipio',
     ];
 
     public function municipio()
     {
-        return $this->belongsTo(Municipio::class, 'fk_codigo_municipio');    
+        return $this->belongsTo(Municipio::class, 'fk_cod_municipio', 'codigo');    
     }
 }

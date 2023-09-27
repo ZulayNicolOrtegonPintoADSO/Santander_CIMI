@@ -14,12 +14,13 @@ return new class extends Migration
         Schema::create('servicios', function (Blueprint $table) {
             $table->bigIncrements('codigo');
             $table->string('nombre' , 20);
-            $table->string('descripcion' , 250);
-            $table->unsignedBigInteger('fk_codigo_categoria_servicios');
-            $table->foreign('fk_codigo_categoria_servicios')->references('codigo')->on('categorias_servicios');
+            $table->string('descripcion' , 50);
 
-            $table->unsignedBigInteger('fk_codigo_establecimiento');
-            $table->foreign('fk_codigo_establecimiento')->references('codigo')->on('municipios');  
+            $table->unsignedBigInteger('fk_cod_categoria');
+            $table->foreign('fk_cod_categoria')->references('codigo')->on('categorias');
+
+            $table->unsignedBigInteger('fk_cod_establecimiento');
+            $table->foreign('fk_cod_establecimiento')->references('codigo')->on('establecimientos');  
             $table->timestamps();
         });
     }

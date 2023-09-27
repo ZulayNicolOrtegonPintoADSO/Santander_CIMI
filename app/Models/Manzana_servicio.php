@@ -5,18 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Establecimiento extends Model
+class Manzana_servicio extends Model
 {
     use HasFactory;
+    
     protected $fillable = [
         'codigo',
-        'nombre',
-        'responsable',
-        'descripcion',
+        'fk_cod_servicio',
+        'fk_cod_manzana',
     ];
 
-    public function servicios()
+    public function agenda()
     {
-        return $this->hasMany(Servicios::class, 'fk_cod_servicio');
+        return $this->hasOne(Agenda::class, 'fk_cod_manzanas_servicios');
     }
 }

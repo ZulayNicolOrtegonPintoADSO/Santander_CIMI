@@ -14,5 +14,8 @@ class Municipio extends Model
         'nombre',
     ];
 
-
+    public function manzana()
+    {
+        return $this->hasMany(Manzana::class, 'fk_cod_municipio');
+    }
 }

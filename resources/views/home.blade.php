@@ -25,8 +25,8 @@
         <li>{{ $user->name }}</li>
 @endforeach
 
-{{-- @foreach ($manzanas as $manzana)
+@foreach ($manzanas as $manzana)
         <li>{{ $manzana->nombre }}</li>
-@endforeach --}}
+@endforeach 
 
 @endsection
