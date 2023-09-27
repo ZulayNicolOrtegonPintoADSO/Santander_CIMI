@@ -2,6 +2,8 @@
 
 @section('content')
 
-<p>VISTA manzana</p>
+<div class="container">
+    
+</div>
 
 @endsection
