@@ -55,3 +55,14 @@ img{
     justify-content: center;
     margin-top: 10px;
 }
+.imagenes_menu{
+    opacity: 100%;
+    width: 200px;
+    height: 50%;
+}
+.columnas .boton{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

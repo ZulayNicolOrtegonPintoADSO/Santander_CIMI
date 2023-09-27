@@ -20,3 +20,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/municipios', [App\Http\Controllers\HomeController::class, 'vista_municipio'])->name('municipios');
+Route::get('/mujeres', [App\Http\Controllers\HomeController::class, 'vista_mujeres'])->name('mujeres');
+Route::get('/servicios', [App\Http\Controllers\HomeController::class, 'vista_servicios'])->name('servicios');
+Route::get('/establecimientos', [App\Http\Controllers\HomeController::class, 'vista_establecimientos'])->name('establecimientos');
+Route::get('/agenda', [App\Http\Controllers\HomeController::class, 'vista_agenda'])->name('agenda');
+Route::get('/manzana', [App\Http\Controllers\HomeController::class, 'vista_manzana'])->name('manzana');
+
+
+
+

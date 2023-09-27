@@ -34,4 +34,28 @@ class HomeController extends Controller
         
         return view('home', compact('users', 'manzanas'));
     }
+    public function vista_municipio()
+    {
+        return view('municipios');
+    }
+    public function vista_mujeres()
+    {
+        return view('mujeres');
+    }
+    public function vista_manzana()
+    {
+        return view('manzana');
+    }
+    public function vista_servicios()
+    {
+        return view('servicios');
+    }
+    public function vista_establecimientos()
+    {
+        return view('establecimientos');
+    }
+    public function vista_agenda()
+    {
+        return view('agenda');
+    }
 }
