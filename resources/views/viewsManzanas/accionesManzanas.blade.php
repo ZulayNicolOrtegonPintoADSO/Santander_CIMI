@@ -37,8 +37,7 @@
                     
                     {{-- Crud --}}
                     <td>
-
-                      
+     
                       {{-- Boton y ruta para editar --}}
                       <a href="{{ route('vistaEditManz', $manzana->codigo) }}" class="btn btn-primary">Editar</a>
                       {{-- Boton y ruta para eliminar --}}

@@ -48,8 +48,12 @@
               </select>
             </div>
 
+<<<<<<< HEAD
 
             {{-- Boton para agregar el nuevo servicio --}}
+=======
+            {{-- Boton para agregar el nuevo municipio --}}
+>>>>>>> a597acbd83b53460284a0c5e7d349079bf871341
             <div class="mt-3">
               <button type="submit" class="btn btn-success form-control">Agregar</button>
             </div>
