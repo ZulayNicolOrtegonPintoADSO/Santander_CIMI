@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Manzana extends Model
 {
+    protected $primaryKey = 'codigo';
+    
     use HasFactory;
 
     protected $fillable = [

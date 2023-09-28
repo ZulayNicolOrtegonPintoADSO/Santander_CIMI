@@ -30,6 +30,9 @@ class HomeController extends Controller
         return view('home');
     }
 
+    /* 
+        FUNCIONES PARA VISTAS DE MUNICIPIOS
+    */
     public function vista_municipio()
     {
         $municipios = Municipio::paginate(100);
@@ -64,32 +67,39 @@ class HomeController extends Controller
     }
 
     
-    
+    /* 
+        FUNCIONES PARA VISTAS DE MANZANAS
+    */
+    public function vista_manzana()
+    {
+        $manzanas = Manzana::paginate(100);
+        // dd($manzanas);
 
-    // public function vista_municipio()
-    // {
-    //     $municipios = Municipio::paginate(100);
-    //     // dd($municipios);
-    //     return view('municipios', compact('municipios'));
-    // }
-    // public function vista_mujeres()
-    // {
-    //     return view('mujeres');
-    // }
-    // public function vista_manzana()
-    // {
-    //     return view('manzana');
-    // }
-    // public function vista_servicios()
-    // {
-    //     return view('servicios');
-    // }
-    // public function vista_establecimientos()
-    // {
-    //     return view('establecimientos');
-    // }
-    // public function vista_agenda()
-    // {
-    //     return view('agenda');
-    // }
+        return view('viewsManzanas/accionesManzanas', compact('manzanas'));
+    }
+
+    public function vistaAggManz()
+    {
+        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR MUNICIPIO
+        return view('viewsManzanas/agregar');
+    }
+
+    public function vistaEditManz($codigo)
+    {
+        $manzana = Manzana::find($codigo);
+        // dd($codigo);
+
+        return view('viewsManzanas/editar', compact('manzana'));
+    }
+
+    public function eliminarManz($codigo)
+    {
+        $manzana = Manzana::find($codigo);
+
+        $manzana->delete();
+
+        return redirect()->route('adminManzanas', compact('manzana'));
+    }
+
+   
 }

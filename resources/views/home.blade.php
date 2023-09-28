@@ -15,12 +15,12 @@
                 </div>
             </div>
 
-            {{-- Contenedor de municipios --}}
+            {{-- Contenedor de manzanas --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Manzanas</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/manzana_card.jpg')}}" alt="">
-                    <a href="{{route('adminMunicipios')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    <a href="{{route('adminMuanzanas')}}" class=" boton btn btn-primary"> Ver más...</a>
                     {{-- <button type="" class="btn btn-primary form-control mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                         Editar municipio
                     </button> --}}

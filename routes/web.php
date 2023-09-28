@@ -34,6 +34,15 @@ Route::post('/editMunicipio/{codigo}', [App\Http\Controllers\CrudController::cla
 Route::get('/eliminar/{codigo}', [App\Http\Controllers\HomeController::class, 'eliminarMun'])->name('eliminar');
 
 
+// Rutas para manzanas
+Route::get('/adminManzanas', [App\Http\Controllers\HomeController::class, 'vista_manzana'])->name('adminManzanas');
 
+Route::get('/vistaAggManz', [App\Http\Controllers\HomeController::class, 'vistaAggManz'])->name('vistaAggManz');
+Route::post('/aggManzana', [App\Http\Controllers\CrudController::class, 'aggManzana'])->name('aggManzana');
+
+Route::get('/vistaEditManz/{codigo}', [App\Http\Controllers\HomeController::class, 'vistaEditManz'])->name('vistaEditManz');
+Route::post('/editManzana/{codigo}', [App\Http\Controllers\CrudController::class, 'editManzana'])->name('editManzana');
+
+Route::get('/eliminarManz/{codigo}', [App\Http\Controllers\HomeController::class, 'eliminarManz'])->name('eliminarManz');
 
 

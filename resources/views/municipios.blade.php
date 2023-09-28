@@ -66,6 +66,7 @@
 <div class="card text-bg-dark">
     <img src="{{asset ('imagenes/manzana_card.jpg')}}" class="card-img" alt="...">
     <div class="card-img-overlay">
+      
         <div class="container text-center">
             <div class="row">
           
