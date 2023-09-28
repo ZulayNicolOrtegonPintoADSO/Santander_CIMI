@@ -136,26 +136,27 @@ class HomeController extends Controller
         $categorias = Categoria::paginate(100);
         $establecimientos =  Establecimiento::paginate(100);
 
-        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR MUNICIPIO
+        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR
         return view('viewsServicios/agregar', compact('categorias', 'establecimientos'));
     }
 
     public function vistaEditServ($codigo)
     {
-        $municipio = Municipio::find($codigo);
+        $categorias = Categoria::paginate(100);
+        $establecimientos =  Establecimiento::paginate(100);
+        $servicio = Servicio::find($codigo);
         // dd($codigo);
 
-        // RETORNA A LA VISTA DEL FORMULARIO PARA EDITAR UN MUNICIPIO TENIENDO EN CUENTA SU ID
-        return view('viewsServicios/editar', compact('municipio'));
+        // RETORNA A LA VISTA DEL FORMULARIO PARA EDITAR
+        return view('viewsServicios/editar', compact('servicio', 'categorias', 'establecimientos'));
     }
 
     public function eliminarServ($codigo)
     {
-        $municipio = Municipio::find($codigo);
+        $servicio = Servicio::find($codigo);
 
-        $municipio->delete();
+        $servicio->delete();
 
-        return redirect()->route('adminMunicipios', compact('municipio'));
+        return redirect()->route('adminServicios', compact('servicio'));
     }
-   
 }

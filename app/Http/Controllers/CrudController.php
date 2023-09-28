@@ -148,28 +148,30 @@ class CrudController extends Controller
 
     public function editServicio(Request $request, $codigo)
     {
-        $manzana = Manzana::find($codigo);
+        $servicio = Servicio::find($codigo);
 
         /*VALIDO LOS DATOS DEL FORMULARIO */
 
         $request->validate([
+
             'nombre'=>	'required|string|max:20',
-            'localidad'=>	'required',
-            'direccion'=>	'required',
-            'fk_cod_municipio'=> 'required',
+            'descripcion'=>	'required',
+            'fk_cod_categoria'=>	'required',
+            'fk_cod_establecimiento'=>	'required',
+            
         ]);
 
         /*PARA CREAR UN NUEVO PERFIL Y ASIGNAR LOS DATOS: */
-        $manzana->nombre = $request->nombre;
-        $manzana->localidad = $request->localidad;
-        $manzana->direccion = $request->direccion;
-        $manzana->fk_cod_municipio = $request->fk_cod_municipio;
+        $servicio->nombre = $request->nombre;
+        $servicio->descripcion = $request->descripcion;
+        $servicio->fk_cod_categoria = $request->fk_cod_categoria;
+        $servicio->fk_cod_establecimiento = $request->fk_cod_establecimiento;
 
         // Guardar el cambio en la base de datos
-        $manzana->save();
+        $servicio->save();
 
         // dd($codigo);
 
-        return redirect()->route('adminManzanas', compact('manzana'));
+        return redirect()->route('adminServicios', compact('servicio'));
     }
 }

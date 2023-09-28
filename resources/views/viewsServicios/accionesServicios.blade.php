@@ -40,10 +40,10 @@
                     {{-- Crud --}}
                     <td>
                       {{-- Boton para editar y su ruta--}}
-                      <a href="" class="btn btn-primary">Editar</a>
+                      <a href="{{ route('vistaEditServ', $servicio->codigo) }}" class="btn btn-primary">Editar</a>
                       
                       {{-- Boton para eliminar y su ruta--}}
-                      <a href="" class="btn btn-danger">Eliminar</a>
+                      <a href="{{ route('eliminarServ', $servicio->codigo) }}" class="btn btn-danger">Eliminar</a>
                     </td>
           
                   </tr>

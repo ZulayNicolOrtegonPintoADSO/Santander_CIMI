@@ -47,7 +47,6 @@
               </select>
             </div>
 
-
             {{-- Boton para agregar el nuevo municipio --}}
             <div class="mt-3">
               <button type="submit" class="btn btn-success form-control">Agregar</button>
