@@ -25,7 +25,10 @@
                     <p class="text-white text-md-center">Manzanas</p>
                     {{-- Imagen --}}
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/manzana_card.jpg')}}" alt="">
+<<<<<<< HEAD
                     {{-- Boton para ver mas sobre esta vista --}}
+=======
+>>>>>>> 8e3576f012331f12e6782d94d06a95bb825f0bce
                     <a href="{{route('adminManzanas')}}" class=" boton btn btn-primary"> Ver más...</a>
                     {{-- <button type="" class="btn btn-primary form-control mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                         Editar municipio

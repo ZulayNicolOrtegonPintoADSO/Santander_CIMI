@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+<<<<<<< HEAD:resources/views/manzana.blade.php
 {{-- Contenedor de la vista del mapa de Manzana --}}
 <div class="container">
     {{-- Contenedor de la carta --}}
+=======
+<div class="container bg">
+>>>>>>> 8e3576f012331f12e6782d94d06a95bb825f0bce:resources/views/viewsManzanas/manzana.blade.php
     <div class="div_imagen">
         <div class="texto_sobre">
             {{-- Imagen --}}
