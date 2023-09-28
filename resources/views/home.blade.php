@@ -1,25 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
+
 <main class="main_menu bg-dark">
     <div class="container">
         <div class="row">
+
+            {{-- Contenedor de municipios --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Municipios</p>
                     <img class="img-thumbnail imagenes_menu rounded mx-auto d-block " src="{{asset('imagenes/municipios.jpg')}}" alt="">
-                    <a href="{{route('municipios')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    <a href="{{route('adminMunicipios')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
+
+            {{-- Contenedor de municipios --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Manzanas</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/manzana_card.jpg')}}" alt="">
-                    <button type="" class="btn btn-primary form-control mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <a href="{{route('adminMunicipios')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    {{-- <button type="" class="btn btn-primary form-control mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                         Editar municipio
-                    </button>
-                    
-                   
+                    </button> --}}
                 </div>
             </div>
 
@@ -60,7 +64,7 @@
                         
                         {{-- ENLACE HACIA LA VISTA DE LA MANZANA --}}
 
-                        <a href="{{route('manzana')}}">¿Te gustaria permitirnos saber tu ubicación?</a>
+                        <a href="#">¿Te gustaria permitirnos saber tu ubicación?</a>
                     </div>
                     {{-- BOTÓN DE CERRAR --}}
                     <div class="modal-footer">
@@ -75,7 +79,7 @@
                 <div class="container_title">
                     <p class="text-white text-md-center">Servicios</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/servicios.jpg')}}" alt="">
-                    <a href="{{route('servicios')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
         </div>
@@ -84,21 +88,21 @@
                 <div class="container_title">
                     <p class="text-white text-md-center">Establecimientos</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/establecimientos.jpg')}}" alt="">
-                    <a href="{{route('establecimientos')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Mujeres</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/mujeres.jpg')}}" alt="">
-                    <a href="{{route('mujeres')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Agenda</p>
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block text-center" src="{{asset('imagenes/agenda.jpg')}}" alt="">
-                    <a href="{{route('agenda')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
         </div>
@@ -106,13 +110,8 @@
     
 </main>
 
-
-@foreach ($users as $user)
-        <li>{{ $user->name }}</li>
-@endforeach
-
-@foreach ($manzanas as $manzana)
-        <li>{{ $manzana->nombre }}</li>
-@endforeach 
-
 @endsection
+
+{{-- TAREAS: --}}
+{{--  ARREGLAR DISEÑO DE AGREGAR MUNICIPIO --}}
+{{--  ARREGLAR DISEÑO DE EDITAR MUNICIPIO--}}

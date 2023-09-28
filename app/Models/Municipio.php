@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Municipio extends Model
 {
+    protected $primaryKey = 'codigo';
+    
     use HasFactory;
 
     protected $fillable = [

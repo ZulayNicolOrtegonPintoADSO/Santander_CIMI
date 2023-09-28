@@ -21,18 +21,18 @@ Auth::routes();
 
 // RUTAS DE LAS VISTAS
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/municipios', [App\Http\Controllers\HomeController::class, 'vista_municipio'])->name('municipios');
-Route::get('/mujeres', [App\Http\Controllers\HomeController::class, 'vista_mujeres'])->name('mujeres');
-Route::get('/servicios', [App\Http\Controllers\HomeController::class, 'vista_servicios'])->name('servicios');
-Route::get('/establecimientos', [App\Http\Controllers\HomeController::class, 'vista_establecimientos'])->name('establecimientos');
-Route::get('/agenda', [App\Http\Controllers\HomeController::class, 'vista_agenda'])->name('agenda');
-Route::get('/manzana', [App\Http\Controllers\HomeController::class, 'vista_manzana'])->name('manzana');
 
+// Rutas para municipios
+Route::get('/adminMunicipios', [App\Http\Controllers\HomeController::class, 'vista_municipio'])->name('adminMunicipios');
 
-// RUTAS PARA EL CRUD DE MUNICIPIOS
-Route::get('/agregar', [App\Http\Controllers\MunicipioController::class, 'agregar'])->name('agregar');
-Route::get('/editar', [App\Http\Controllers\MunicipioController::class, 'editar'])->name('editar');
-Route::get('/eliminar', [App\Http\Controllers\MunicipioController::class, 'eliminar'])->name('eliminar');
+Route::get('/vistaAgg', [App\Http\Controllers\HomeController::class, 'vistaAggMun'])->name('vistaAgg');
+Route::post('/aggMunicipio', [App\Http\Controllers\CrudController::class, 'aggMunicipio'])->name('aggMunicipio');
+
+Route::get('/vistaEdit/{codigo}', [App\Http\Controllers\HomeController::class, 'vistaEditMun'])->name('vistaEdit');
+Route::post('/editMunicipio/{codigo}', [App\Http\Controllers\CrudController::class, 'editMunicipio'])->name('editMunicipio');
+
+Route::get('/eliminar/{codigo}', [App\Http\Controllers\HomeController::class, 'eliminarMun'])->name('eliminar');
+
 
 
 

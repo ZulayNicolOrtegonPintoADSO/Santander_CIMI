@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Manzana;
 use App\Models\Municipio;
+use App\Models\Municipios;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -26,38 +27,69 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $manzanas = Manzana::paginate(20);
-        $users = User::paginate(20);
-        
-        // dd($manzanas);
-        
-        return view('home', compact('users', 'manzanas'));
+        return view('home');
     }
-    
+
     public function vista_municipio()
     {
         $municipios = Municipio::paginate(100);
+        // dd($municipios);
 
-        return view('municipios', compact('municipios'));
+        // RETORNA LA VISTA DE LOS ELEMENTOS DE LA BD DE MUNICIPIOS
+        return view('viewsMunicipios/accionesMunicipios', compact('municipios'));
     }
-    public function vista_mujeres()
+
+    public function vistaAggMun()
     {
-        return view('mujeres');
+        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR MUNICIPIO
+        return view('viewsMunicipios/agregar');
     }
-    public function vista_manzana()
+
+    public function vistaEditMun($codigo)
     {
-        return view('manzana');
+        $municipio = Municipio::find($codigo);
+        // dd($codigo);
+
+        // RETORNA A LA VISTA DEL FORMULARIO PARA EDITAR UN MUNICIPIO TENIENDO EN CUENTA SU ID
+        return view('viewsMunicipios/editar', compact('municipio'));
     }
-    public function vista_servicios()
+
+    public function eliminarMun($codigo)
     {
-        return view('servicios');
+        $municipio = Municipio::find($codigo);
+
+        $municipio->delete();
+
+        return redirect()->route('adminMunicipios', compact('municipio'));
     }
-    public function vista_establecimientos()
-    {
-        return view('establecimientos');
-    }
-    public function vista_agenda()
-    {
-        return view('agenda');
-    }
+
+    
+    
+
+    // public function vista_municipio()
+    // {
+    //     $municipios = Municipio::paginate(100);
+    //     // dd($municipios);
+    //     return view('municipios', compact('municipios'));
+    // }
+    // public function vista_mujeres()
+    // {
+    //     return view('mujeres');
+    // }
+    // public function vista_manzana()
+    // {
+    //     return view('manzana');
+    // }
+    // public function vista_servicios()
+    // {
+    //     return view('servicios');
+    // }
+    // public function vista_establecimientos()
+    // {
+    //     return view('establecimientos');
+    // }
+    // public function vista_agenda()
+    // {
+    //     return view('agenda');
+    // }
 }
