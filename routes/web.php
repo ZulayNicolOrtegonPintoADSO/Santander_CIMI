@@ -46,3 +46,14 @@ Route::post('/editManzana/{codigo}', [App\Http\Controllers\CrudController::class
 Route::get('/eliminarManz/{codigo}', [App\Http\Controllers\HomeController::class, 'eliminarManz'])->name('eliminarManz');
 
 Route::get('/vistaMapa', [App\Http\Controllers\HomeController::class, 'vistaMapa'])->name('vistaMapa');
+
+// Rutas para servicios
+Route::get('/adminServicios', [App\Http\Controllers\HomeController::class, 'vista_servicios'])->name('adminServicios');
+
+Route::get('/vistaAggServ', [App\Http\Controllers\HomeController::class, 'vistaAggServ'])->name('vistaAggServ');
+Route::post('/aggServicio', [App\Http\Controllers\CrudController::class, 'aggServicio'])->name('aggServicio');
+
+Route::get('/vistaEditServ/{codigo}', [App\Http\Controllers\HomeController::class, 'vistaEditServ'])->name('vistaEditServ');
+Route::post('/editServicio/{codigo}', [App\Http\Controllers\CrudController::class, 'editServicio'])->name('editServicio');
+
+Route::get('/eliminarServ/{codigo}', [App\Http\Controllers\HomeController::class, 'eliminarServ'])->name('eliminarServ');
