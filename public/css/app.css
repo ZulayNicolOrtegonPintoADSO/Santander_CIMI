@@ -97,3 +97,28 @@ img{
   -ms-transition: opacity 500ms;
   transition: opacity 500ms;
 }
+.parrafo_servicios{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+.descripcion{
+    margin-top: 200px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.imagen_activiades{
+    margin-top: 150px;
+    /* margin-right: 100px; */
+}
+.parrafo_lista{
+    margin-top: 150px;
+    margin-left: 700px;
+    font-size: 20px;
+}
+.question_servicios{
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 150px;
+    font-weight: 600;
+}
