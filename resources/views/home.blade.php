@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+{{-- Para crear le fondo, contenededor y filas --}}
 <main class="main_menu bg-dark">
     <div class="container">
         <div class="row">
@@ -9,8 +9,11 @@
             {{-- Contenedor de municipios --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
+                    {{-- Tiutlo --}}
                     <p class="text-white text-md-center">Municipios</p>
+                    {{-- Imagen --}}
                     <img class="img-thumbnail imagenes_menu rounded mx-auto d-block " src="{{asset('imagenes/municipios.jpg')}}" alt="">
+                    {{-- Boton para ver mas sobre esta vista --}}
                     <a href="{{route('adminMunicipios')}}" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
@@ -18,9 +21,12 @@
             {{-- Contenedor de manzanas --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
+                    {{-- Titulo --}}
                     <p class="text-white text-md-center">Manzanas</p>
+                    {{-- Imagen --}}
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/manzana_card.jpg')}}" alt="">
-                    <a href="{{route('adminMuanzanas')}}" class=" boton btn btn-primary"> Ver más...</a>
+                    {{-- Boton para ver mas sobre esta vista --}}
+                    <a href="{{route('adminManzanas')}}" class=" boton btn btn-primary"> Ver más...</a>
                     {{-- <button type="" class="btn btn-primary form-control mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                         Editar municipio
                     </button> --}}
@@ -74,34 +80,50 @@
                 </div>
             </div>
 
-
+            {{-- Contenedor de Servicios --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
+                    {{-- Titulo --}}
                     <p class="text-white text-md-center">Servicios</p>
+                    {{-- Imagen --}}
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/servicios.jpg')}}" alt="">
+                    {{-- Boton para ver mas sobre esta vista --}}
                     <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
         </div>
+        {{-- Sguiente fila para los contenedores --}}
         <div class="row">
+            {{-- Contenedor de Estaablecimientos  --}}
             <div class=" columnas col-12 col-md-4 border "> 
                 <div class="container_title">
+                    {{-- Titulo --}}
                     <p class="text-white text-md-center">Establecimientos</p>
-                    <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/establecimientos.jpg')}}" alt="">
+                    {{-- Imagen --}}
+                    <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/establecimientos.webp')}}" alt="">
+                    {{-- Boton para ver mas sobre esta vista --}}
                     <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
+            {{-- Contenedor de Mujeres --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
+                    {{-- Titulo --}}
                     <p class="text-white text-md-center">Mujeres</p>
+                    {{-- Imagen --}}
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/mujeres.jpg')}}" alt="">
+                    {{-- Boton para ver mas sobre esta vista --}}
                     <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
+            {{-- Contenedor de Agenda --}}
             <div class=" columnas col-12 col-md-4 border"> 
                 <div class="container_title">
+                    {{-- Titulo --}}
                     <p class="text-white text-md-center">Agenda</p>
+                    {{-- Imagen --}}
                     <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block text-center" src="{{asset('imagenes/agenda.jpg')}}" alt="">
+                    {{-- Boton para ver mas sobre esta vista --}}
                     <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
+{{-- Formulario con la ruta hacia la vista de editar --}}
 <form method="POST" action="{{ route('editMunicipio', $municipio->codigo) }}">
 
     @csrf
