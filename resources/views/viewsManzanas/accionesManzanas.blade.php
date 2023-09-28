@@ -48,6 +48,9 @@
       </div>
     </div>
 
+    {{-- Botón que abre la vista del mapa de la manzana --}}
+    <a href="{{route('vistaMapa')}}">¿Quieres ver la manzana en mapa?</a>
+
     <div>
       <a href="{{route('home')}}" class=" boton btn btn-primary"> Atras </a>
     </div>

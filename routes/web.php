@@ -45,4 +45,4 @@ Route::post('/editManzana/{codigo}', [App\Http\Controllers\CrudController::class
 
 Route::get('/eliminarManz/{codigo}', [App\Http\Controllers\HomeController::class, 'eliminarManz'])->name('eliminarManz');
 
-
+Route::get('/vistaMapa', [App\Http\Controllers\HomeController::class, 'vistaMapa'])->name('vistaMapa');

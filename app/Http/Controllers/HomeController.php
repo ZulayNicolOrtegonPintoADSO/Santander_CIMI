@@ -87,9 +87,12 @@ class HomeController extends Controller
     public function vistaEditManz($codigo)
     {
         $manzana = Manzana::find($codigo);
+
+        $municipios = Municipio::paginate(100);
+
         // dd($codigo);
 
-        return view('viewsManzanas/editar', compact('manzana'));
+        return view('viewsManzanas/editar', compact('manzana', 'municipios'));
     }
 
     public function eliminarManz($codigo)
@@ -101,5 +104,10 @@ class HomeController extends Controller
         return redirect()->route('adminManzanas', compact('manzana'));
     }
 
+    public function vistaMapa()
+    {
+        // RETORNA A LA VISTA DEL MAPA
+        return view('viewsManzanas/manzana');
+    }
    
 }

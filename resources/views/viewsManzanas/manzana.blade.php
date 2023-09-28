@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container bg">
     <div class="div_imagen">
         <div class="texto_sobre">
             <img src="{{asset ('imagenes/museo.jpg')}}" class="imagen_modal" alt="...">
