@@ -4,7 +4,7 @@
 
 
 
-{{-- Contenedor de la vista de editar Municipio --}}
+{{-- Contenedor de la vista de editar Servicio --}}
 <div class="container ">
   <div class="row">
     <div class="">
@@ -17,15 +17,15 @@
               <label for="nombre" class="col-md-4 col-form-label ">{{ __('Nombre:') }}</label>
               <input name="nombre" type="text" class="form-control"  autofocus>
             </div>
-
+          {{-- Campo necesario --}}
             <div class="">
               <label for="descripcion" class="col-md-4 col-form-label ">{{ __('Descripcion:') }}</label>
               <input name="descripcion" type="text" class="form-control"  autofocus>
             </div>
-
+          {{-- Campo necesario --}}
             <div class="">
               <label for="fk_cod_categoria" class="col-md-4 col-form-label ">{{ __('Categoria:') }}</label>
-      
+          {{-- Campo necesario --}} 
               <select name="fk_cod_categoria" class="form-control">
                 <option value="">Escoge uno de estos ...</option>
       
@@ -37,10 +37,11 @@
 
             <div class="">
               <label for="fk_cod_establecimiento" class="col-md-4 col-form-label ">{{ __('Establecimiento:') }}</label>
-      
+          {{-- Campo necesario --}}
               <select name="fk_cod_establecimiento" class="form-control">
                 <option value="">Escoge uno de estos ...</option>
       
+                {{-- Imprimiendo datos de la tabla Servicios --}}
                 @foreach ($establecimientos as $establecimiento)
                     <option value="{{ $establecimiento->codigo }}">{{ $establecimiento->nombre }}</option>
                 @endforeach
@@ -48,7 +49,7 @@
             </div>
 
 
-            {{-- Boton para agregar el nuevo municipio --}}
+            {{-- Boton para agregar el nuevo servicio --}}
             <div class="mt-3">
               <button type="submit" class="btn btn-success form-control">Agregar</button>
             </div>

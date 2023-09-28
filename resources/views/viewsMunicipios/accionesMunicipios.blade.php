@@ -51,8 +51,9 @@
     <div>
       <a href="{{route('home')}}" class=" boton btn btn-primary"> Atras </a>
     </div>
-    
-  </div>
+      </div>
 </div>
-
 @endsection
+
+
+

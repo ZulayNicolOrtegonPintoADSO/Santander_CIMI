@@ -16,6 +16,7 @@
         <input name="nombre" type="text" class="form-control"  value="{{ $municipio->nombre }}" autofocus>
       </div>
 
+      {{-- Boton para editar definitiamente el servicio --}}
       <div class="">
         <button type="submit" class="btn btn-primary">Editar</button>
       </div>

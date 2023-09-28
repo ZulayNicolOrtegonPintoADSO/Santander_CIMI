@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-{{-- Contenedor de la vista de municipios --}}
+{{-- Contenedor de la vista de servicios --}}
 <div class="card text-bg-dark">
+  {{-- Imagen de fondo --}}
   <img src="{{asset ('imagenes/manzana_card.jpg')}}" class="card-img" alt="...">
   <div class="card-img-overlay">
 
@@ -11,7 +12,7 @@
       {{-- Fila necesaria --}}
       <div class="row">
 
-          {{-- Tabla que muestra los municipios --}}
+          {{-- Tabla que muestra los servicios --}}
           <table class="table table-dark mt-5">
               <thead>
                 {{-- Campos requeridos --}}

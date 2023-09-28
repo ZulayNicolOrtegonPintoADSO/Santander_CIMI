@@ -38,7 +38,7 @@
             <div class=" columnas col-12 col-md-4 border "> 
                 <div class="container_title">
                     <p class="text-white text-md-center">Establecimientos</p>
-                    <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/establecimientos.jpg')}}" alt="">
+                    <img class=" img-thumbnail imagenes_menu rounded mx-auto d-block" src="{{asset('imagenes/establecimientos.webp')}}" alt="">
                     <a href="#" class=" boton btn btn-primary"> Ver más...</a>
                 </div>
             </div>
@@ -58,6 +58,8 @@
             </div>
         </div>
     </div>
+
+
     
 </main>
 
