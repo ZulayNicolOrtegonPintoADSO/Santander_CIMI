@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Manzana;
 use App\Models\Municipio;
+use App\Models\Servicio;
 use Illuminate\Http\Request;
 
 class CrudController extends Controller
@@ -87,6 +88,65 @@ class CrudController extends Controller
     }
 
     public function editManzana(Request $request, $codigo)
+    {
+        $manzana = Manzana::find($codigo);
+
+        /*VALIDO LOS DATOS DEL FORMULARIO */
+
+        $request->validate([
+            'nombre'=>	'required|string|max:20',
+            'localidad'=>	'required',
+            'direccion'=>	'required',
+            'fk_cod_municipio'=> 'required',
+        ]);
+
+        /*PARA CREAR UN NUEVO PERFIL Y ASIGNAR LOS DATOS: */
+        $manzana->nombre = $request->nombre;
+        $manzana->localidad = $request->localidad;
+        $manzana->direccion = $request->direccion;
+        $manzana->fk_cod_municipio = $request->fk_cod_municipio;
+
+        // Guardar el cambio en la base de datos
+        $manzana->save();
+
+        // dd($codigo);
+
+        return redirect()->route('adminManzanas', compact('manzana'));
+    }
+
+
+
+    /*
+        VALIDACIÓN CAMPOS FORM Y CRUD DE SERVICIOS
+    */ 
+
+    public function aggServicio(Request $request)
+    {
+        $request->validate([
+
+            'nombre'=>	'required|string|max:20',
+            'descripcion'=>	'required',
+            'fk_cod_categoria'=>	'required',
+            'fk_cod_establecimiento'=>	'required',
+            
+        ]);
+
+        /*PARA CREAR UN NUEVO MUNICIPIO Y ASIGNAR LOS DATOS: */
+        $servicio = new Servicio();
+
+        $servicio->nombre = $request->nombre;
+        $servicio->descripcion = $request->descripcion;
+        $servicio->fk_cod_categoria = $request->fk_cod_categoria;
+        $servicio->fk_cod_establecimiento = $request->fk_cod_establecimiento;
+
+        $servicio->save();
+
+        // dd($municipio);
+
+        return redirect()->route('adminServicios', compact('servicio'));
+    }
+
+    public function editServicio(Request $request, $codigo)
     {
         $manzana = Manzana::find($codigo);
 

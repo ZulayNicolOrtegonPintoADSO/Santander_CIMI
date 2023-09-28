@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
+use App\Models\Establecimiento;
 use App\Models\Manzana;
 use App\Models\Municipio;
 use App\Models\Municipios;
+use App\Models\Servicio;
+use App\Models\Servicios;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -80,8 +84,10 @@ class HomeController extends Controller
 
     public function vistaAggManz()
     {
-        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR MUNICIPIO
-        return view('viewsManzanas/agregar');
+        $municipios = Municipio::paginate(100);
+
+        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR 
+        return view('viewsManzanas/agregar', compact('municipios'));
     }
 
     public function vistaEditManz($codigo)
@@ -108,6 +114,48 @@ class HomeController extends Controller
     {
         // RETORNA A LA VISTA DEL MAPA
         return view('viewsManzanas/manzana');
+    }
+
+
+
+
+    /* 
+        FUNCIONES PARA VISTAS DE SERVICIOS
+    */
+    public function vista_servicio()
+    {
+        $servicios = Servicio::paginate(100);
+        // dd($servicios);
+
+        // RETORNA LA VISTA DE LOS ELEMENTOS DE LA BD SERVICIOS
+        return view('viewsServicios/accionesServicios', compact('servicios'));
+    }
+
+    public function vistaAggServ()
+    {
+        $categorias = Categoria::paginate(100);
+        $establecimientos =  Establecimiento::paginate(100);
+
+        // RETORNA A LA VISTA DEL FORMULARIO PARA AGREGAR MUNICIPIO
+        return view('viewsServicios/agregar', compact('categorias', 'establecimientos'));
+    }
+
+    public function vistaEditServ($codigo)
+    {
+        $municipio = Municipio::find($codigo);
+        // dd($codigo);
+
+        // RETORNA A LA VISTA DEL FORMULARIO PARA EDITAR UN MUNICIPIO TENIENDO EN CUENTA SU ID
+        return view('viewsServicios/editar', compact('municipio'));
+    }
+
+    public function eliminarServ($codigo)
+    {
+        $municipio = Municipio::find($codigo);
+
+        $municipio->delete();
+
+        return redirect()->route('adminMunicipios', compact('municipio'));
     }
    
 }

@@ -47,8 +47,9 @@ Route::get('/eliminarManz/{codigo}', [App\Http\Controllers\HomeController::class
 
 Route::get('/vistaMapa', [App\Http\Controllers\HomeController::class, 'vistaMapa'])->name('vistaMapa');
 
+
 // Rutas para servicios
-Route::get('/adminServicios', [App\Http\Controllers\HomeController::class, 'vista_servicios'])->name('adminServicios');
+Route::get('/adminServicios', [App\Http\Controllers\HomeController::class, 'vista_servicio'])->name('adminServicios');
 
 Route::get('/vistaAggServ', [App\Http\Controllers\HomeController::class, 'vistaAggServ'])->name('vistaAggServ');
 Route::post('/aggServicio', [App\Http\Controllers\CrudController::class, 'aggServicio'])->name('aggServicio');

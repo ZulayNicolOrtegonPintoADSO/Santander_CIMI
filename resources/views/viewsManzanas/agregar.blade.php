@@ -28,7 +28,14 @@
 
             <div class="">
               <label for="fk_cod_municipio" class="col-md-4 col-form-label ">{{ __('Municipio:') }}</label>
-              <input name="fk_cod_municipio" type="text" class="form-control"  autofocus>
+      
+              <select name="fk_cod_municipio" class="form-control">
+                <option value="">Escoge uno de estos municipios</option>
+      
+                @foreach ($municipios as $municipio)
+                    <option value="{{ $municipio->codigo }}">{{ $municipio->nombre }}</option>
+                @endforeach
+              </select>
             </div>
 
 
