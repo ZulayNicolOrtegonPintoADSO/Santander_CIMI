@@ -146,7 +146,9 @@ img{
     display: flex;
     justify-content: center;
 }
-
-.bg{
-    /* background-color: red; */
+.mapa{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
 }

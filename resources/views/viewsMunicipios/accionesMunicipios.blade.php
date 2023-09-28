@@ -3,6 +3,7 @@
 @section('content')
 {{-- Contenedor de la vista de municipios --}}
 <div class="card text-bg-dark">
+  {{-- Imagen de fondo --}}
   <img src="{{asset ('imagenes/manzana_card.jpg')}}" class="card-img" alt="...">
   <div class="card-img-overlay">
 
@@ -23,7 +24,7 @@
                 </tr>
               </thead>
               
-              {{-- Validaciones --}}
+              {{-- Imprimiendo tabla municipio --}}
               <tbody>
                 @foreach ($municipios as $municipio)
                   <tr>
