@@ -28,9 +28,22 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="card" style="width: 18rem;">
+                <div class="tarjeta">
+                    <h5 class="card-title">Estudiar</h5>
+                    <img src="{{asset ('imagenes/card_imagen.jpg')}}" class="card_imagen" alt="...">
+                    <p class="card-text">El estudio es el conjunto de técnicas y estrategias puestas en práctica por un sujeto, denominado estudiante, para incorporar conocimientos de una determinada disciplina o de las relaciones entre estos y otros conocimientos.</p>
+                    <a href="#" class="codigo_serv" >#0001</a>
+                </div>
+              </div>
             <div class="question_servicios">
                 Nuestros servicios estan a la puerta de tu casa, no esperes más para utilizarlos
                 <br>Te esperamos!
+            </div>
+            
+            <div>
+                <a href="{{route('home')}}" class=" boton btn btn-primary"> Atras </a>
             </div>
         </div>
     </div>

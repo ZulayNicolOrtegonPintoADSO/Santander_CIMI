@@ -112,13 +112,37 @@ img{
     /* margin-right: 100px; */
 }
 .parrafo_lista{
-    margin-top: 150px;
+    margin-top: 50px;
     margin-left: 700px;
     font-size: 20px;
 }
 .question_servicios{
     font-size: 20px;
     margin-left: 100px;
-    margin-top: 150px;
+    /* margin-top: 150px; */
     font-weight: 600;
+}
+.tarjeta{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #C1C0C2;
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+}
+.card-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card_imagen{
+    opacity: 100%;
+    width: 150px;
+    margin-left: 70px;
+}
+.codigo_serv{
+    display: flex;
+    justify-content: center;
 }
